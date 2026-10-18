@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Flask / Database
+instance/
+*.db
+*.sqlite3
+
+# Uploads
+uploads/profiles/*
+uploads/bulk/*
+!uploads/.gitkeep
+!uploads/profiles/.gitkeep
+!uploads/bulk/.gitkeep
+
+# Environment variables
+.env
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/

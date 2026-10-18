@@ -1,0 +1,210 @@
+{
+  "project_name": "Advanced Heart Disease Prediction System",
+  "brand_name": "HeartPredict AI",
+  "version": "1.0.0",
+  "target_column": "target",
+  "target_classes": {
+    "0": {
+      "label": "Lower Risk (Negative)",
+      "code": "LOWER_RISK"
+    },
+    "1": {
+      "label": "Higher Risk (Positive)",
+      "code": "HIGHER_RISK"
+    }
+  },
+  "all_features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "selected_top_features": [
+    "cp",
+    "thalach",
+    "ca",
+    "oldpeak",
+    "thal",
+    "age",
+    "chol",
+    "trestbps",
+    "exang",
+    "slope"
+  ],
+  "feature_importances": [
+    {
+      "feature": "cp",
+      "importance": 0.1342013121766532
+    },
+    {
+      "feature": "thalach",
+      "importance": 0.12047306938037394
+    },
+    {
+      "feature": "ca",
+      "importance": 0.11675514572786522
+    },
+    {
+      "feature": "oldpeak",
+      "importance": 0.1161512602695811
+    },
+    {
+      "feature": "thal",
+      "importance": 0.09704339662214527
+    },
+    {
+      "feature": "age",
+      "importance": 0.08931302856085871
+    },
+    {
+      "feature": "chol",
+      "importance": 0.07892955881827148
+    },
+    {
+      "feature": "trestbps",
+      "importance": 0.07425339868409114
+    },
+    {
+      "feature": "exang",
+      "importance": 0.05959221930542648
+    },
+    {
+      "feature": "slope",
+      "importance": 0.04873836505724686
+    },
+    {
+      "feature": "sex",
+      "importance": 0.03605681314146417
+    },
+    {
+      "feature": "restecg",
+      "importance": 0.01961871211448977
+    },
+    {
+      "feature": "fbs",
+      "importance": 0.008873720141532853
+    }
+  ],
+  "hybrid_architecture": "Random Forest + SVM + KNN -> Logistic Regression Meta Learner",
+  "model_metrics": {
+    "Hybrid Stacking": {
+      "train_accuracy": 0.99860529986053,
+      "test_accuracy": 0.9545454545454546,
+      "precision": 0.9736842105263158,
+      "recall": 0.9367088607594937,
+      "f1_score": 0.9548387096774194,
+      "roc_auc": 0.9932489451476794
+    },
+    "Logistic Regression": {
+      "train_accuracy": 0.8493723849372385,
+      "test_accuracy": 0.8311688311688312,
+      "precision": 0.797752808988764,
+      "recall": 0.8987341772151899,
+      "f1_score": 0.8452380952380952,
+      "roc_auc": 0.8864135021097047,
+      "supports_probability": true
+    },
+    "Random Forest": {
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9675324675324676,
+      "precision": 1.0,
+      "recall": 0.9367088607594937,
+      "f1_score": 0.9673202614379085,
+      "roc_auc": 0.9983122362869198,
+      "supports_probability": true
+    },
+    "SVM": {
+      "train_accuracy": 0.9218967921896792,
+      "test_accuracy": 0.8636363636363636,
+      "precision": 0.8536585365853658,
+      "recall": 0.8860759493670886,
+      "f1_score": 0.8695652173913043,
+      "roc_auc": 0.9353586497890295,
+      "supports_probability": true
+    },
+    "KNN": {
+      "train_accuracy": 0.9065550906555091,
+      "test_accuracy": 0.8311688311688312,
+      "precision": 0.8732394366197183,
+      "recall": 0.7848101265822784,
+      "f1_score": 0.8266666666666667,
+      "roc_auc": 0.8903797468354432,
+      "supports_probability": true
+    },
+    "Decision Tree": {
+      "train_accuracy": 0.9567642956764296,
+      "test_accuracy": 0.8896103896103896,
+      "precision": 0.9078947368421053,
+      "recall": 0.8734177215189873,
+      "f1_score": 0.8903225806451613,
+      "roc_auc": 0.9528270042194092,
+      "supports_probability": true
+    },
+    "AdaBoost": {
+      "train_accuracy": 0.8967921896792189,
+      "test_accuracy": 0.8636363636363636,
+      "precision": 0.8536585365853658,
+      "recall": 0.8860759493670886,
+      "f1_score": 0.8695652173913043,
+      "roc_auc": 0.9387341772151898,
+      "supports_probability": true
+    },
+    "Naive Bayes": {
+      "train_accuracy": 0.8158995815899581,
+      "test_accuracy": 0.8311688311688312,
+      "precision": 0.8192771084337349,
+      "recall": 0.8607594936708861,
+      "f1_score": 0.8395061728395061,
+      "roc_auc": 0.8870886075949367,
+      "supports_probability": true
+    },
+    "Neural Network": {
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9545454545454546,
+      "precision": 1.0,
+      "recall": 0.9113924050632911,
+      "f1_score": 0.9536423841059603,
+      "roc_auc": 0.9675949367088608,
+      "supports_probability": true
+    },
+    "Extra Trees": {
+      "train_accuracy": 1.0,
+      "test_accuracy": 0.9675324675324676,
+      "precision": 1.0,
+      "recall": 0.9367088607594937,
+      "f1_score": 0.9673202614379085,
+      "roc_auc": 0.9984810126582279,
+      "supports_probability": true
+    }
+  },
+  "split_ratio": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "preprocessing_pipeline": [
+    {
+      "step": "Median Imputation",
+      "strategy": "median"
+    },
+    {
+      "step": "Top Feature Selection",
+      "top_k": 10,
+      "method": "RandomForest Feature Importance"
+    },
+    {
+      "step": "StandardScaler",
+      "with_mean": true,
+      "with_std": true
+    }
+  ]
+}
